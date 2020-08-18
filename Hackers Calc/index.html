@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <video autoplay muted loop id="bgvdo" onvolumechange="myFunction()">
+        <source src="bgvdo.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+    <br><br>
+        <hr>
+    <center>
+    <table>
+        <br>
+        <!--
+<div  class="slidecontainer" id="slider">
+            <input style="color: green;"  type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </div>
+        -->
+        
+        <button style="font-size: 35px; width:450px; height: 45px;" onclick="stop_start()" id="playpause">Hackers Calculator </button>
+        <br><br>
+        <textarea style="font-size: 30px; color:green;" onkeypress="reload()" name="" id="bar" cols="20s" rows="1"></textarea>
+    <br>
+    <button id="one" onclick="display(x=1)" onmousedown="beep1.play()">1</button>
+    <button id="two" onclick="display(x=2)" onmousedown="beep2.play()">2</button>
+    <button id="three" onclick="display(x=3)" onmousedown="beep7.play()">3</button> 
+    <button id="add" onclick="display(x='+')" onmousedown="beep2.play()">+</button>
+    <br>
+    <button id="four" onclick="display(x=4)" onmousedown="beep7.play()">4</button>
+    <button id="five" onclick="display(x=5)" onmousedown="beep2.play()">5</button>
+    <button id="six" onclick="display(x=6)" onmousedown="beep9.play()" >6</button> 
+    <button id="sub" onclick="display(x='-')" onmousedown="beep7.play()">-</button>
+
+    <br>
+    <button id="seven" onclick="display(x=7)" onmousedown="beep7.play()">7</button>
+    <button id="eight" onclick="display(x=8)" onmousedown="beep8.play()">8</button>
+    <button id="nine" onclick="display(x=9)" onmousedown="beep9.play()">9</button> 
+    <button id="mul" onclick="display(x='*')" onmousedown="beep9.play()">*</button>
+
+    <br>
+    <button id="clear" onclick="display(x='c')" onmousedown="quack.play()">C</button>
+    <button id="zero" onclick="display(x=0)" onmousedown="beep7.play()">0</button>
+    <button id="equals" onclick="display(x='=')" onmousedown="eql.play()">=</button>
+    <button id="div" onclick="display(x='/')" onmousedown="beep8.play()">/</button>
+    </table>
+</center>
+    <hr>
+    <center>
+        <button style="font-size: 30px; width:120px; height: 40px;" id="s"onclick="ps()">Logs </button><br><br>
+        <textarea style="font-size: 25px; color:green; font-weight: bolder;"  name="" id="log" cols="30" rows="2"></textarea> <br><br>
+        <button id="clr" onclick="display(x='k')" onmousedown="quack.play()">Clr</button>
+    </center>
+    </div>
+    <script>
+        document.getElementById("log").defaultValue="Crack The Code ";
+        function ps(){
+    if (video.paused==0)
+    {
+            if (video.muted==true){
+                video.muted=false;
+            }
+            else
+            {
+                video.muted=true;
+            }
+    }
+}
+    var beep1=new Audio();
+    beep1.src="beep1.mp3";
+    var beep2=new Audio();
+    beep2.src="beep2.mp3";
+    var beep3=new Audio();
+    beep3.src="beep3.mp3";
+    var beep4=new Audio();
+    beep4.src="beep4.mp3";
+    var beep5=new Audio();
+    beep5.src="beep5.mp3";
+    var beep6=new Audio();
+    beep6.src="beep6.mp3";
+    var beep7=new Audio();
+    beep7.src="beep7.mp3";
+    var beep8=new Audio();
+    beep8.src="beep8.mp3";
+    var beep9=new Audio();
+    beep9.src="beep9.mp3";
+    var eql=new Audio();
+    eql.src="equals.mp3"
+    var quack=new Audio();
+    quack.src="quack.mp3";
+    function display(){
+        
+    if (x=='k')
+    {
+        document.getElementById("log").innerHTML="";
+    }
+    else if (x=='c')
+    {
+        document.getElementById("bar").innerHTML="";
+    }
+    else if (x=='=')
+    {   
+        console.log(document.getElementById('bar').innerHTML)
+        if (document.getElementById('bar').innerHTML=="1729")
+        {
+            document.getElementById("bar").innerHTML="Unlocked !"
+            window.open("https://vigneshwartech.wordpress.com/about/",'_self');
+        }
+    var ans=eval(document.getElementById("bar").innerHTML);
+       document.getElementById("log").innerHTML+=document.getElementById("bar").innerHTML+"="+ans+" ";
+       document.getElementById("bar").innerHTML=ans;
+       return count
+    }
+    else
+    {
+    document.getElementById("bar").innerHTML+=x;
+    }
+}
+function reload(){
+    location.reload(true);
+}
+var video=document.getElementById("bgvdo");
+var btn=document.getElementById("playpause");
+function stop_start(){
+    if (video.paused==1) 
+    {
+    video.play();
+    } 
+    else 
+    {
+    video.pause();
+    }
+
+}
+    </script>
+   
+</body>
+</html>

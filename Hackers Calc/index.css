@@ -1,0 +1,41 @@
+
+#clr{
+
+   width: 80px; 
+   height: 50px;
+}
+#bgvdo
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+table{
+    border:greenyellow;
+}
+h1,h2{
+    font-weight: bolder;
+    font-style: unset;
+    color: greenyellow;
+}
+button{
+    width: 70px;
+    height: 70px;
+    color: greenyellow;
+    font-weight: bolder;
+    font-size: 34px;
+    background-color: black;
+    text-align: center;
+}
+
+body{
+    background-color:black;
+}
+.content {
+    position: absolute;
+    bottom: 90;
+    color: #f1f1f1;
+    width: 100%;
+  }
